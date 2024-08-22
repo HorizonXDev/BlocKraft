@@ -1,8 +1,9 @@
-String getScmContent(String screenName, String appName) {
-  return r'''
-  #|
-  $JSON
-  {"authURL":[],"YaVersion":"229","Source":"Form","Properties":{"$Name":"Screen1","$Type":"Form","$Version":"31","Uuid":"0","Title":"Screen1","AppName":"blockraft","Theme":"AppTheme.Light.DarkActionBar"}}
-  |#
-  ''';
+class ScmContent {
+  final String content;
+
+  ScmContent(String screenName, String appName)
+      : content = '''
+    #|
+    {"authURL":[],"YaVersion":"229","Source":"Form","Properties":{"Name":"$screenName","Type":"Form","Version":"31","Uuid":"0","Title":"$screenName","AppName":"$appName","Theme":"AppTheme.Light.DarkActionBar"}}
+    |#''';
 }

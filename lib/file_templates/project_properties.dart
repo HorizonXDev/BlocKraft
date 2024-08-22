@@ -1,6 +1,7 @@
-String getProjectProperties(String appName, String packageName) {
-
-  return r'''
+class ProjectProperties {
+  final String content;
+  ProjectProperties(String appName, String packageName)
+      : content = '''
   source=../src
   name=$appName
   defaultfilescope=App
@@ -19,5 +20,4 @@ String getProjectProperties(String appName, String packageName) {
   versioncode=1
   color.primary.dark=&HFF41521C
   ''';
-
 }
