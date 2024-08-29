@@ -40,8 +40,7 @@ class CreateCommand extends Command{
 
   @override
   Future<void> run() async {
-    if (argResults!.rest.length == 1) {
-    } else {
+    if (argResults!.rest.length != 1) {
       printUsage();
       exit(64);
     }
