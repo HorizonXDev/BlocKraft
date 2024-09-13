@@ -5,6 +5,6 @@ class ScmContent {
       : content = '''
     #|
     \$JSON
-    {"authURL":[],"YaVersion":"229","Source":"Form","Properties":{"\$Name":"$screenName","\$Type":"Form","\$Version":"31","Uuid":"0","Title":"$screenName","AppName":"$appName","Theme":"AppTheme.Light.DarkActionBar"}}
+    {"authURL":[],"YaVersion":"228","Source":"Form","Properties":{"\$Name":"$screenName","\$Type":"Form","\$Version":"31","Uuid":"0","Title":"$screenName","AppName":"$appName","Theme":"AppTheme.Light.DarkActionBar"}}
     |#''';
 }
