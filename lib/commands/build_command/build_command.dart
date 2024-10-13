@@ -92,7 +92,7 @@ class BuildCommand extends Command {
       var scmPath = '${screen.path}${Platform.pathSeparator}${screen.path.split(Platform.pathSeparator).last}.scm';
       var scmFile = File(scmPath);
       if (scmFile.existsSync()) {
-        var relativePath = scmFile.path.replaceFirst(screensDirectory.path, '');
+        var relativePath = '${screen.path.split(Platform.pathSeparator).last}.scm';
         var newFile = File('${outputScmDirectory.path}$relativePath')..createSync(recursive: true);
         newFile.writeAsBytesSync(scmFile.readAsBytesSync());
       }
