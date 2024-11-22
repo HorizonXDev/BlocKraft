@@ -13,7 +13,6 @@ dependencies:
   dart_console: ^4.1.0
   path: ^1.9.1
   yaml: ^3.1.2
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: ^3.0.0
