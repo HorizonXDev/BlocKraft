@@ -17,6 +17,5 @@ extensions:
   enabled:
 
 assets:
-
       ''';
 }

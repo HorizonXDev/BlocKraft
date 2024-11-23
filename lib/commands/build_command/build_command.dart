@@ -69,7 +69,7 @@ class BuildCommand extends Command {
   void compileAia(ParsingYaml parseYaml, YamlMap blockraftYaml) {
     var assetsDirectory = Directory('$cd${Platform.pathSeparator}assets');
     var projectProperties = File('$cd${Platform.pathSeparator}project.properties');
-    var outputDirectory = Directory('$cd${Platform.pathSeparator}output${Platform.pathSeparator}${parseYaml.getAppName(blockraftYaml)}')..createSync(recursive: true);
+    Directory('$cd${Platform.pathSeparator}output${Platform.pathSeparator}${parseYaml.getAppName(blockraftYaml)}').createSync(recursive: true);
     var screensDirectory = Directory('$cd${Platform.pathSeparator}screens');
 
     // Initialize archive
@@ -106,9 +106,8 @@ class BuildCommand extends Command {
     zipFile.renameSync(aiaPath);
 
     // Clean up the output directory
-    // Directory('$cd${Platform.pathSeparator}output${Platform.pathSeparator}${parseYaml.getAppName(blockraftYaml)}').deleteSync(recursive: true);
+    Directory('$cd${Platform.pathSeparator}output${Platform.pathSeparator}${parseYaml.getAppName(blockraftYaml)}').deleteSync(recursive: true);
 
-    print('Successfully created .aia file at $aiaPath');
   }
 
 // Helper function to add a directory to archive
