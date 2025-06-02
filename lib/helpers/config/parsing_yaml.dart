@@ -29,7 +29,6 @@ class ParsingYaml {
     return appName;
   }
 
-  // Function to create Screens based on config
   void createScreens(YamlMap config) {
     final screens = config['screens']['include'];
     final appName = config['project']['name'].toString();
@@ -45,7 +44,7 @@ class ParsingYaml {
     }
   }
 
-  // Function to handle extensions based on config
+
   void handleExtensions(YamlMap config) {
     final enabledExtensions = config['extensions']['enabled'];
     if (enabledExtensions != null) {

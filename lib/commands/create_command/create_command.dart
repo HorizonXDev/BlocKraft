@@ -65,7 +65,7 @@ class CreateCommand extends Command {
 
   String? _getBuilder() {
     final builder = argResults!['builder']?.toString().trim();
-    if (builder == null || builder != 'n') {
+    if (builder == null || builder != 'n' || builder != 'a') {
       _printError('Please provide the correct builder name');
     }
     return builder;
@@ -122,8 +122,8 @@ class CreateCommand extends Command {
     else if(builder == 'k'){
       // TODO: Properties file's content for Kodular
     }
-    else if(builder == 'm'){
-      // TODO: Properties file's content for MIT App Inventor
+    else if(builder == 'a'){
+      propertiesFile.writeAsString(projectProperties.getContentForAppInventor());
     }
 
     Console()
